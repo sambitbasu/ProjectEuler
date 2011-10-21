@@ -5,7 +5,7 @@ Created on Sep 24, 2011
 '''
 
 from math import *
-from util.Util import *
+from util.MathUtil import *
 
 class EulerProblemTo10(object):
     '''
@@ -266,3 +266,17 @@ values do not exceed four million, find the sum of the even-valued terms."
                     print("%d X %d X %d = %d" % (a, b, (1000 -a -b), a*b*(1000-a-b)))
                     return
         print("No such triplet")
+        
+    def problem10(self, args):
+        '''
+        The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+        Find the sum of all the primes below two million.
+        '''
+        stmt = "Find the sum of all the primes below two million."
+        print(stmt)
+        
+        primes = MathUtil.getPrimes(2000000)
+        tot = sum(primes)
+        
+        print(tot)
